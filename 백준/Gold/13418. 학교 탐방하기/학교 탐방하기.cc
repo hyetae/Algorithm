@@ -1,39 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//int input[2][100001] = { 0, };
-//int dp[2][100001] = { 0, };
-//
-//int main() {
-//    int T;
-//    cin >> T;
-//
-//    for (int tc = 1; tc < T + 1; tc++){
-//        int n;
-//        cin >> n;
-//
-//        for (int i = 0; i < 2; i++)
-//            for (int j = 0; j < n; j++)
-//                cin >> dp[i][j];
-//
-//        dp[0][0] = input[0][0];
-//        dp[1][0] = input[1][0];
-//        dp[0][1] = input[0][1] + input[1][0];
-//        dp[1][1] = input[1][1] + input[0][0];
-//
-//        for (int i = 2; i < n; i++){
-//            dp[0][i] = dp[i - 2] + ;
-//            dp[1][i] = input[1][i];
-//        }
-//
-//
-//        memset(input, 0, sizeof(int));
-//        memset(dp, 0, sizeof(int));
-//    }
-//
-//    return 0;
-//}
-
 #define MAX 1001
 
 struct Edge {
