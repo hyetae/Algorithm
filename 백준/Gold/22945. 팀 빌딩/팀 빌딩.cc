@@ -8,7 +8,6 @@ int main() {
     int N;
     cin >> N;
 
-    int x;
     vector<int> v(N);
     for (int i = 0; i < N; i++) {
         cin >> v[i];
