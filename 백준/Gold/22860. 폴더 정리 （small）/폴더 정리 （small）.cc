@@ -14,9 +14,7 @@ void dfs(string target, string now) {
         if (!tree[now][i].second) {
             s.insert(tree[now][i].first);
             cnt++;
-        }
-        else
-            dfs(target, tree[now][i].first);
+        } else dfs(target, tree[now][i].first);
     }
 
     if (target != now)
@@ -29,17 +27,14 @@ void dfs(string target, string now) {
 }
 
 string parser(string q) {
-    vector<string> loc;
     string name = "";
     for (char c: q) {
-        if (c == '/') {
-            loc.push_back(name);
+        if (c == '/')
             name = "";
-        } else
+        else
             name += c;
     }
-    loc.push_back(name);
-    return loc.back();
+    return name;
 }
 
 int main() {
