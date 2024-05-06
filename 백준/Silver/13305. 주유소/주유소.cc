@@ -1,30 +1,13 @@
 #include <bits/stdc++.h>
+#define ll long long
 using namespace std;
 
-bool cmp(pair<int, int> a, pair<int, int> b) {
-    if (a.second == b.second)
-        return a.first < b.first;
-    return a.second < b.second;
-}
-
-int solution(int n, vector<int> road, vector<int> city) {
-    vector<pair<int, int>> v;
-    for (int i = 0; i < n - 1; i++)
-        v.push_back({i, city[i]});
-
-    sort(v.begin(), v.end(), cmp);
-
+ll solution(int n, vector<int> road, vector<int> city) {
     int sum = 0;
-    int isCheapest = 0;
-    pair<int, int> cheapest = v.front();
+    int sel = 1e9;
     for (int i = 0; i < n - 1; i++) {
-        if (isCheapest)
-            sum += road[i] * cheapest.second;
-        else
-            sum += road[i] * city[i];
-
-        if (i == cheapest.first)
-            isCheapest = 1;
+        sel = min(sel, city[i]);
+        sum += sel * road[i];
     }
     return sum;
 }
